@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/panmou/Codes/qt/demo3/demo3/build/demo3_autogen/mocs_compilation.cpp" "/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.o"
-  "/home/panmou/Codes/qt/demo3/demo3/src/main.cpp" "/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/demo3.dir/src/main.cpp.o"
-  "/home/panmou/Codes/qt/demo3/demo3/src/mainwindow.cpp" "/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/demo3.dir/src/mainwindow.cpp.o"
+  "/mnt/d/Codes/cppProjects/radarUI/build/demo3_autogen/mocs_compilation.cpp" "/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.o"
+  "/mnt/d/Codes/cppProjects/radarUI/src/main.cpp" "/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/demo3.dir/src/main.cpp.o"
+  "/mnt/d/Codes/cppProjects/radarUI/src/mainwindow.cpp" "/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/demo3.dir/src/mainwindow.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

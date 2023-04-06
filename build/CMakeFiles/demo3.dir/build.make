@@ -62,10 +62,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/panmou/Codes/qt/demo3/demo3
+CMAKE_SOURCE_DIR = /mnt/d/Codes/cppProjects/radarUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/panmou/Codes/qt/demo3/demo3/build
+CMAKE_BINARY_DIR = /mnt/d/Codes/cppProjects/radarUI/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/demo3.dir/depend.make
@@ -78,42 +78,42 @@ include CMakeFiles/demo3.dir/flags.make
 
 CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.o: CMakeFiles/demo3.dir/flags.make
 CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.o: demo3_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.o -c /home/panmou/Codes/qt/demo3/demo3/build/demo3_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.o -c /mnt/d/Codes/cppProjects/radarUI/build/demo3_autogen/mocs_compilation.cpp
 
 CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panmou/Codes/qt/demo3/demo3/build/demo3_autogen/mocs_compilation.cpp > CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Codes/cppProjects/radarUI/build/demo3_autogen/mocs_compilation.cpp > CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panmou/Codes/qt/demo3/demo3/build/demo3_autogen/mocs_compilation.cpp -o CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Codes/cppProjects/radarUI/build/demo3_autogen/mocs_compilation.cpp -o CMakeFiles/demo3.dir/demo3_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/demo3.dir/src/main.cpp.o: CMakeFiles/demo3.dir/flags.make
 CMakeFiles/demo3.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/demo3.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo3.dir/src/main.cpp.o -c /home/panmou/Codes/qt/demo3/demo3/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/demo3.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo3.dir/src/main.cpp.o -c /mnt/d/Codes/cppProjects/radarUI/src/main.cpp
 
 CMakeFiles/demo3.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo3.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panmou/Codes/qt/demo3/demo3/src/main.cpp > CMakeFiles/demo3.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Codes/cppProjects/radarUI/src/main.cpp > CMakeFiles/demo3.dir/src/main.cpp.i
 
 CMakeFiles/demo3.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo3.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panmou/Codes/qt/demo3/demo3/src/main.cpp -o CMakeFiles/demo3.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Codes/cppProjects/radarUI/src/main.cpp -o CMakeFiles/demo3.dir/src/main.cpp.s
 
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: CMakeFiles/demo3.dir/flags.make
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo3.dir/src/mainwindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo3.dir/src/mainwindow.cpp.o -c /home/panmou/Codes/qt/demo3/demo3/src/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo3.dir/src/mainwindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo3.dir/src/mainwindow.cpp.o -c /mnt/d/Codes/cppProjects/radarUI/src/mainwindow.cpp
 
 CMakeFiles/demo3.dir/src/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo3.dir/src/mainwindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panmou/Codes/qt/demo3/demo3/src/mainwindow.cpp > CMakeFiles/demo3.dir/src/mainwindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Codes/cppProjects/radarUI/src/mainwindow.cpp > CMakeFiles/demo3.dir/src/mainwindow.cpp.i
 
 CMakeFiles/demo3.dir/src/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo3.dir/src/mainwindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panmou/Codes/qt/demo3/demo3/src/mainwindow.cpp -o CMakeFiles/demo3.dir/src/mainwindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Codes/cppProjects/radarUI/src/mainwindow.cpp -o CMakeFiles/demo3.dir/src/mainwindow.cpp.s
 
 # Object files for target demo3
 demo3_OBJECTS = \
@@ -134,7 +134,7 @@ demo3: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.2
 demo3: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.2
 demo3: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.2
 demo3: CMakeFiles/demo3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable demo3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable demo3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -147,6 +147,6 @@ CMakeFiles/demo3.dir/clean:
 .PHONY : CMakeFiles/demo3.dir/clean
 
 CMakeFiles/demo3.dir/depend:
-	cd /home/panmou/Codes/qt/demo3/demo3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panmou/Codes/qt/demo3/demo3 /home/panmou/Codes/qt/demo3/demo3 /home/panmou/Codes/qt/demo3/demo3/build /home/panmou/Codes/qt/demo3/demo3/build /home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/demo3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/d/Codes/cppProjects/radarUI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/Codes/cppProjects/radarUI /mnt/d/Codes/cppProjects/radarUI /mnt/d/Codes/cppProjects/radarUI/build /mnt/d/Codes/cppProjects/radarUI/build /mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/demo3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/demo3.dir/depend
 

@@ -271,7 +271,9 @@ CMakeFiles/demo3.dir/src/mainwindow.cpp.o: ../inc/mainwindow.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: ../inc/para.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
+CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTime
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QtMath
@@ -296,6 +298,7 @@ CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtC
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
@@ -329,6 +332,7 @@ CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtC
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qrandom.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
 CMakeFiles/demo3.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h

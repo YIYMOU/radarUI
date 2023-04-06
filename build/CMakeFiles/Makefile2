@@ -63,10 +63,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/panmou/Codes/qt/demo3/demo3
+CMAKE_SOURCE_DIR = /mnt/d/Codes/cppProjects/radarUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/panmou/Codes/qt/demo3/demo3/build
+CMAKE_BINARY_DIR = /mnt/d/Codes/cppProjects/radarUI/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +94,14 @@ clean: CMakeFiles/demo3_autogen.dir/clean
 CMakeFiles/demo3.dir/all: CMakeFiles/demo3_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo3.dir/build.make CMakeFiles/demo3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo3.dir/build.make CMakeFiles/demo3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles --progress-num=1,2,3,4 "Built target demo3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles --progress-num=1,2,3,4 "Built target demo3"
 .PHONY : CMakeFiles/demo3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/demo3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/demo3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles 0
 .PHONY : CMakeFiles/demo3.dir/rule
 
 # Convenience name for target.
@@ -121,14 +121,14 @@ CMakeFiles/demo3.dir/clean:
 CMakeFiles/demo3_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo3_autogen.dir/build.make CMakeFiles/demo3_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo3_autogen.dir/build.make CMakeFiles/demo3_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles --progress-num=5 "Built target demo3_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles --progress-num=5 "Built target demo3_autogen"
 .PHONY : CMakeFiles/demo3_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/demo3_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/demo3_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles 0
 .PHONY : CMakeFiles/demo3_autogen.dir/rule
 
 # Convenience name for target.

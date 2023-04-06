@@ -1,6 +1,6 @@
-/home/panmou/Codes/qt/demo3/demo3/build/demo3_autogen/DIG64O274K/moc_mainwindow.cpp: /home/panmou/Codes/qt/demo3/demo3/inc/mainwindow.h \
-  /home/panmou/Codes/qt/demo3/demo3/build/demo3_autogen/moc_predefs.h \
-  /home/panmou/Codes/qt/demo3/demo3/inc/para.h \
+/mnt/d/Codes/cppProjects/radarUI/build/demo3_autogen/DIG64O274K/moc_mainwindow.cpp: /mnt/d/Codes/cppProjects/radarUI/inc/mainwindow.h \
+  /mnt/d/Codes/cppProjects/radarUI/build/demo3_autogen/moc_predefs.h \
+  /mnt/d/Codes/cppProjects/radarUI/inc/para.h \
   /usr/include/assert.h \
   /usr/include/c++/10/algorithm \
   /usr/include/c++/10/array \

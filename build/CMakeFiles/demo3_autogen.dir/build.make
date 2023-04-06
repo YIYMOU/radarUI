@@ -62,10 +62,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/panmou/Codes/qt/demo3/demo3
+CMAKE_SOURCE_DIR = /mnt/d/Codes/cppProjects/radarUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/panmou/Codes/qt/demo3/demo3/build
+CMAKE_BINARY_DIR = /mnt/d/Codes/cppProjects/radarUI/build
 
 # Utility rule file for demo3_autogen.
 
@@ -73,8 +73,8 @@ CMAKE_BINARY_DIR = /home/panmou/Codes/qt/demo3/demo3/build
 include CMakeFiles/demo3_autogen.dir/progress.make
 
 CMakeFiles/demo3_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target demo3"
-	/usr/bin/cmake -E cmake_autogen /home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/demo3_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target demo3"
+	/usr/bin/cmake -E cmake_autogen /mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/demo3_autogen.dir/AutogenInfo.json Debug
 
 demo3_autogen: CMakeFiles/demo3_autogen
 demo3_autogen: CMakeFiles/demo3_autogen.dir/build.make
@@ -91,6 +91,6 @@ CMakeFiles/demo3_autogen.dir/clean:
 .PHONY : CMakeFiles/demo3_autogen.dir/clean
 
 CMakeFiles/demo3_autogen.dir/depend:
-	cd /home/panmou/Codes/qt/demo3/demo3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panmou/Codes/qt/demo3/demo3 /home/panmou/Codes/qt/demo3/demo3 /home/panmou/Codes/qt/demo3/demo3/build /home/panmou/Codes/qt/demo3/demo3/build /home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/demo3_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/d/Codes/cppProjects/radarUI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/Codes/cppProjects/radarUI /mnt/d/Codes/cppProjects/radarUI /mnt/d/Codes/cppProjects/radarUI/build /mnt/d/Codes/cppProjects/radarUI/build /mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/demo3_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/demo3_autogen.dir/depend
 

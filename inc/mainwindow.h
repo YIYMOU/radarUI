@@ -56,6 +56,8 @@ private:
 
     static int CountLines(const QString& fileName);
 
+    float generateRand(float min, float max);
+
 private slots:
     void on_Btn_GetDir_clicked();
 

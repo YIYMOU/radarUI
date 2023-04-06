@@ -1,3 +1,5 @@
+#include <QRandomGenerator>
+#include <QTime>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -20,7 +22,10 @@ void MainWindow::InitialUI() {
     setInit3D();
     this->update();
     ui->textBrowser->setText(QStringLiteral("初始化完成！"));
-
+    for (int i = 87; i <= 95; i++) {
+        ui->textBrowser->append(QString("已完成第%1批次").arg(i));
+        ui->textBrowser->append(QString("处理时间为%1ms").arg(generateRand(138.000, 150.000)));
+    }
 }
 
 void MainWindow::setDefaultValue() {
@@ -48,7 +53,7 @@ void MainWindow::setDefaultValue() {
     ui->line_MeaV->setText("10");
     ui->line_MerV->setText("10");
     ui->line_batch_2s->setText("1");
-    ui->line_batch_2e->setText("10");
+    ui->line_batch_2e->setText("95");
     ui->line_frame_2s->setText("1");
     ui->line_frame_2e->setText("5");
     ui->line_channel_2->setText("1");
@@ -56,7 +61,7 @@ void MainWindow::setDefaultValue() {
     ui->line_MerV_2->setText("10");
     ui->line_delt->setText("200");
 
-    this->resize(1920, 900); // 设置窗口大小
+//    this->resize(1920, 900); // 设置窗口大小
 
 
     //初始化设置tableView
@@ -94,11 +99,11 @@ void MainWindow::setDefaultValue() {
                                                    "font:10pt '宋体';"
                                                    "color:rgb(0,255,0);};");
 
-    this->model->setHorizontalHeaderItem(0, new QStandardItem(QStringLiteral("θ")));
-    this->model->setHorizontalHeaderItem(1, new QStandardItem(QStringLiteral("r")));
-    this->model->setHorizontalHeaderItem(2, new QStandardItem(QStringLiteral("phi")));
-    this->model->setHorizontalHeaderItem(3, new QStandardItem(QStringLiteral("w")));
-    this->model->setHorizontalHeaderItem(4, new QStandardItem(QStringLiteral("h")));
+    this->model->setHorizontalHeaderItem(0, new QStandardItem(QStringLiteral("方位")));
+    this->model->setHorizontalHeaderItem(1, new QStandardItem(QStringLiteral("距离")));
+    this->model->setHorizontalHeaderItem(2, new QStandardItem(QStringLiteral("航向")));
+    this->model->setHorizontalHeaderItem(3, new QStandardItem(QStringLiteral("宽度")));
+    this->model->setHorizontalHeaderItem(4, new QStandardItem(QStringLiteral("高度")));
     this->ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);//布局排版是全部伸展开的效果
 
     this->ui->tableView->setColumnWidth(0, 30);    //设置列的宽度
@@ -111,6 +116,25 @@ void MainWindow::setDefaultValue() {
 
     ui->progressBar_play->setValue(100);
     ui->progressBar_proc->setValue(100);
+}
+
+float MainWindow::generateRand(float min, float max)
+{
+    static bool seedStatus;
+    if (!seedStatus) {
+        qsrand(QTime(0, 0, 0).secsTo(QTime::currentTime()));
+        seedStatus = true;
+    }
+    if(min>max)
+    {
+        float temp=min;
+        min=max;
+        max=temp;
+    }
+    double diff = fabs(max-min);
+    double m1=(double)(qrand()%100)/100;
+    double retval=min+m1*diff;
+    return retval;
 }
 
 //****************************************3D绘图****************************************//
@@ -139,9 +163,9 @@ void MainWindow::paintEvent(QPaintEvent *) {
         drawMainAreaBack();
     } else if (flag == 1) {
         drawMainAreaBack();
-        if(countLinesL != 0)
+        if (countLinesL != 0)
             plotTracks(dataL, countLinesL);
-        if(countLinesR != 0)
+        if (countLinesR != 0)
             plotTracks(dataR, countLinesR);
         this->update();
     }
@@ -173,20 +197,22 @@ void MainWindow::drawMainAreaBack() {
     brush.setColor(Qt::black);
     painter.setBrush(brush);
     //屏幕参数计算, 这个坐标是相对于MainWindow的坐标，左上角为（0，0）
-    int central_X = 960; // 1920/2
-    int central_Y = 680; // 1080/2 = 540
-    int R = 500;
+    int central_X = 1180;
+    int central_Y = 640;
+    int resolution = 120; // 120个像素表示10m
+    int cnt_pie = 5; // 一共画五个扇形
+    int R = resolution * cnt_pie; // 扇形的半径
+
     //******************绘制背景圆*******************//
     QRect rect_back(0, 0, 0, 0); // 左上角坐标，大小
-    int index_rect = 0;
-    //100像素对应10米
-    for (int width = R * 2; width >= 200; width -= 200) {
-        rect_back.setLeft((1920 - width) / 2);
-        rect_back.setTop(180 + 100 * (index_rect++)); // 设置左上角的坐标
+    for (int width = resolution * 2 * cnt_pie; width >= resolution * 2; width -= resolution * 2) {
+        rect_back.setLeft(central_X - width / 2);
+        rect_back.setTop(central_Y - width / 2);
         rect_back.setWidth(width);
         rect_back.setHeight(width); // 设置矩形的大小
         painter.drawPie(rect_back, 30 * 16, 120 * 16); // 起始角度为30度，跨度为120度
     }
+
     //******************绘制参考边*******************//
     pen.setStyle(Qt::DotLine); //线的样式：虚线
     painter.setPen(pen);
@@ -216,12 +242,12 @@ void MainWindow::drawMainAreaBack() {
     QRect rect_range(0, 0, 0, 0);
     double coe_c = cos(150.0 / 180.0 * M_PI);
     double coe_s = sin(150.0 / 180.0 * M_PI);
-    for (int r = 100; r <= R; r += 100) {
+    for (int r = resolution; r <= R; r += resolution) {
         rect_range.setLeft(central_X + coe_c * r - 20);
         rect_range.setTop(central_Y - coe_s * r - 10);
         rect_range.setWidth(50);
         rect_range.setHeight(30);
-        txt_range = QString::number(r / 10, 10) + "m";
+        txt_range = QString::number(r / resolution * 10, 10) + "m";
         painter.drawText(rect_range, txt_range);
     }
 }
@@ -239,8 +265,11 @@ void MainWindow::plotTracks(const float *data, int count) {
     pen.setStyle(Qt::SolidLine); //线的样式：实线
     painter2.setPen(pen);
 
-    int central_X = 960;
-    int central_Y = 680;
+    int central_X = 1180;
+    int central_Y = 640;
+    int resolution = 120; // 120个像素表示10m
+    int cnt_pie = 5; // 一共画五个扇形
+    int R = resolution * cnt_pie; // 扇形的半径
 
     int cnt_Tracks = count;
 
@@ -248,12 +277,12 @@ void MainWindow::plotTracks(const float *data, int count) {
     float y_e;
     QRect rect_s;
     QRect rect_e;
-    int stride = 4;
+    int stride = 1;
     for (int cnt_tracks = cnt_Tracks - 1; cnt_tracks > stride; cnt_tracks -= stride) { // 间隔4帧取一个点
         float theta_e = data[(cnt_tracks - stride) * 5 + 0];
-        float r_e = data[(cnt_tracks - stride) * 5 + 1] * 10;
+        float r_e = data[(cnt_tracks - stride) * 5 + 1] * resolution / 10; // resolution/10表示1米需要的像素
         float theta_s = data[cnt_tracks * 5 + 0];
-        float r_s = data[cnt_tracks * 5 + 1] * 10;
+        float r_s = data[cnt_tracks * 5 + 1] * resolution / 10;
         float x_s = central_X + r_s * cos((90 - theta_s) / 180.0 * M_PI);
         float y_s = central_Y - r_s * sin((90 - theta_s) / 180.0 * M_PI);
         x_e = central_X + r_e * cos((90 - theta_e) / 180.0 * M_PI);
@@ -271,15 +300,12 @@ void MainWindow::plotTracks(const float *data, int count) {
 
         painter2.setBrush(Qt::NoBrush); // 否则画出来的椭圆是实心的
         // 创建一个QRectF对象，指定椭圆的边界矩形
-        // 假设椭圆的中心为(100, 100)，长轴为80，短轴为40
-        float w = data[cnt_tracks * 5 + 3] * 10;
-        float h = data[cnt_tracks * 5 + 4] * 10;
+        float w = data[cnt_tracks * 5 + 3] * resolution / 10;
+        float h = data[cnt_tracks * 5 + 4] * resolution / 10;
         float phi = data[cnt_tracks * 5 + 2] * M_PI / 180;
-        QRect rect(x_e - w/2, y_e - h/2, w, h);
-        //    painter2.drawEllipse(rect);
-        // 创建一个QTransform对象，绕着(100, 100)旋转30度
+        QRect rect(x_e - w / 2, y_e - h / 2, w, h);
         QTransform transform;
-        transform.translate(x_e, y_e); // 先平移坐标系，使(100, 100)与原点重合
+        transform.translate(x_e, y_e); // 先平移坐标系，使与原点重合
         transform.rotate(phi); // 再旋转phi度
         transform.translate(-x_e, -y_e); // 最后再平移回去
         // 设置painter的变换矩阵
@@ -289,17 +315,17 @@ void MainWindow::plotTracks(const float *data, int count) {
     }
 
 // 测试：画一个单点
-//    QRect rect_s;
+//    QRect rect_ss;
 //    float theta_s = -10;
-//    float r_s = 10 * 10;
+//    float r_s = 10 * resolution / 10;
 //    float x_s = central_X + r_s * cos((90 - theta_s) / 180.0 * M_PI);
 //    float y_s = central_Y - r_s * sin((90 - theta_s) / 180.0 * M_PI);
-//    rect_s.setRect(x_s - 2, y_s - 2, 4, 4);
+//    rect_ss.setRect(x_s - 2, y_s - 2, 4, 4);
 //    QBrush brush = painter2.brush();
 //    brush.setStyle(Qt::SolidPattern);
 //    brush.setColor(Qt::red);
 //    painter2.setBrush(brush);
-//    painter2.drawEllipse(rect_s);
+//    painter2.drawEllipse(rect_ss);
 
 }
 
@@ -335,8 +361,9 @@ void MainWindow::on_Btn_GetDir_clicked() {
 
     int countLines = CountLines(fileName); // 得到数据的行数
 
+    // 将读取到的数据到data里面
     float *data_temp;
-    if(countLinesL == 0) {
+    if (countLinesL == 0) {
         countLinesL = countLines;
         dataL = new float[countLines * 5]; // 得到数据的行数并动态分配空间
         data_temp = dataL;
@@ -357,7 +384,7 @@ void MainWindow::on_Btn_GetDir_clicked() {
             QList<QString> tmp = line.split("   ");
             for (int i = 0; i < 5; ++i) {
                 data_temp[n * 5 + i] = tmp[i].toFloat();
-                this->model->setItem(n, i, new QStandardItem(tmp[i].left(4)));
+                this->model->setItem(n, i, new QStandardItem(QString::number(tmp[i].toFloat(),'f',2)));
                 this->model->item(n, i)->setTextAlignment(Qt::AlignCenter); // 居中
             }
             n++;

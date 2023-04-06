@@ -1,4 +1,4 @@
-/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/rebuild_cache.dir
-/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/edit_cache.dir
-/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/demo3.dir
-/home/panmou/Codes/qt/demo3/demo3/build/CMakeFiles/demo3_autogen.dir
+/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/edit_cache.dir
+/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/demo3.dir
+/mnt/d/Codes/cppProjects/radarUI/build/CMakeFiles/demo3_autogen.dir
